@@ -1,11 +1,13 @@
 export const PATHS = {
   home: "/",
   settings: "/settings",
-  workouts: "/workouts"
+  workouts: "/workouts",
+  workout: "/workout"
 }
 
 export const PAGE_PATHS = [
   PATHS.home,
   PATHS.settings,
-  PATHS.workouts
+  PATHS.workouts,
+  PATHS.workout
 ]
