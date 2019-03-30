@@ -1,0 +1,16 @@
+.App-header {
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 5vmin);
+  color: white;
+  background: #1d2027;
+}
+
+.App-header a {
+  text-decoration: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
