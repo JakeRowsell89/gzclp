@@ -2,6 +2,7 @@
   {
     "day": 1,
     "completed": false,
+    "date": null,
     "exercises": [
       {
         "completed": false,
@@ -40,10 +41,11 @@
   },
   {
     "day": 4,
-    "completed": false,
+    "completed": true,
+    "date": "2019-03-28T13:35:56.660Z",
     "exercises": [
       {
-        "completed": false,
+        "completed": true,
         "tier": 1,
         "stage": 1,
         "name": "Deadlift",
@@ -54,7 +56,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 2,
         "stage": 1,
         "name": "Overhead Press",
@@ -65,7 +67,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 3,
         "stage": 1,
         "name": "Dumbbell Row",
@@ -79,10 +81,11 @@
   },
   {
     "day": 3,
-    "completed": false,
+    "completed": true,
+    "date": "2019-03-26T13:35:56.660Z",
     "exercises": [
       {
-        "completed": false,
+        "completed": true,
         "tier": 1,
         "stage": 1,
         "name": "Bench Press",
@@ -93,7 +96,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 2,
         "stage": 1,
         "name": "Squat",
@@ -104,7 +107,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 3,
         "stage": 1,
         "name": "Lat Pulldown",
@@ -118,10 +121,11 @@
   },
   {
     "day": 2,
-    "completed": false,
+    "completed": true,
+    "date": "2019-03-23T13:35:56.660Z",
     "exercises": [
       {
-        "completed": false,
+        "completed": true,
         "tier": 1,
         "stage": 1,
         "name": "Overhead Press",
@@ -132,7 +136,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 2,
         "stage": 1,
         "name": "Deadlift",
@@ -143,7 +147,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 3,
         "stage": 1,
         "name": "Dumbbell Row",
@@ -157,10 +161,11 @@
   },
   {
     "day": 1,
-    "completed": false,
+    "completed": true,
+    "date": "2019-03-21T13:35:56.660Z",
     "exercises": [
       {
-        "completed": false,
+        "completed": true,
         "tier": 1,
         "stage": 1,
         "name": "Squat",
@@ -171,7 +176,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 2,
         "stage": 1,
         "name": "Bench Press",
@@ -182,7 +187,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 3,
         "stage": 1,
         "name": "Lat Pulldown",

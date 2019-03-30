@@ -1,0 +1,39 @@
+.Workout-tile {
+  min-height: 15vh;
+  margin-top: 5vh;
+  min-width: 90vw;
+  padding: 1vh;
+  border: 1px solid;
+}
+
+.Workout-tile .tile-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  min-height: 5vh;
+  font-size: calc(9px + 2vmin);
+}
+
+.Workout-tile .date {
+  text-align: left;
+  min-height: 5vh;
+}
+
+.Workout-tile .tier {
+  min-width: 3vw;
+}
+
+.Workout-tile .exercise {
+  min-width: 40vw;
+}
+
+.Workout-tile .weight {
+  width: 15vw;
+  text-align: right;
+}
+
+.Workout-tile .reps {
+  min-width: 15vw;
+  text-align: left;
+}

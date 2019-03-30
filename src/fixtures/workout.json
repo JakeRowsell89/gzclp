@@ -1,6 +1,7 @@
 {
   "day": 1,
   "completed": false,
+  "date": null,
   "exercises": [
     {
       "completed": false,
