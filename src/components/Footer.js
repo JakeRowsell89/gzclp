@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import './Footer.css';
+
+import Workouts from './pages/Workouts'
 
 
 class Footer extends Component {
@@ -7,7 +10,7 @@ class Footer extends Component {
     console.log('rerender')
     return (
       <footer className="App-footer">
-        menu options
+        <Link to="/workouts">Workouts</Link>
       </footer>
     )
   }

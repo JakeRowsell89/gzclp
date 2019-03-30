@@ -5,6 +5,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Home from './pages/Home'
 import Settings from './pages/Settings'
+import Workouts from './pages/Workouts'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <Header />
           <Route exact path="/" component={Home} />
           <Route path="/settings" component={Settings} />
+          <Route path="/workouts" component={Workouts} />
           <Footer />
         </div>
       </Router>
