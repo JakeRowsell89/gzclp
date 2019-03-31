@@ -1,0 +1,20 @@
+
+.Workout-page .exercise .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Workout-page .exercise .info .name {
+  min-width: 50vw;
+  text-align: left;
+}
+
+.Workout-page .exercise .info .weight {
+  min-width: 15vw;
+  text-align: right;
+}
+.Workout-page .exercise .info .reps {
+  min-width: 20vw;
+  text-align: left;
+}

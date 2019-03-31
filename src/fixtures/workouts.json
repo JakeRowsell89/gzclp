@@ -1,11 +1,51 @@
 [
   {
-    "day": 1,
+    "day": 2,
     "completed": false,
     "date": null,
     "exercises": [
       {
         "completed": false,
+        "tier": 1,
+        "stage": 1,
+        "name": "Overhead Press",
+        "reps": "5x3",
+        "weight": {
+          "amount": 35,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": false,
+        "tier": 2,
+        "stage": 1,
+        "name": "Deadlift",
+        "reps": "3×10",
+        "weight": {
+          "amount": 75,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": false,
+        "tier": 3,
+        "stage": 1,
+        "name": "Dumbbell Row",
+        "reps": "3×15+",
+        "weight": {
+          "amount": 14,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
+    "day": 1,
+    "completed": true,
+    "date": "2019-03-31T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": true,
         "tier": 1,
         "stage": 1,
         "name": "Squat",
@@ -16,7 +56,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 2,
         "stage": 1,
         "name": "Bench Press",
@@ -27,7 +67,7 @@
         }
       },
       {
-        "completed": false,
+        "completed": true,
         "tier": 3,
         "stage": 1,
         "name": "Lat Pulldown",
