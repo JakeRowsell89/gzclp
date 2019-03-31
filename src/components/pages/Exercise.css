@@ -14,7 +14,15 @@
   min-width: 15vw;
   text-align: right;
 }
-.Workout-page .exercise .info .reps {
+.Workout-page .exercise .info .format {
   min-width: 20vw;
   text-align: left;
+}
+
+.Workout-page .passedSets {
+  color: green;
+}
+
+.Workout-page .failedSets {
+  color: red;
 }

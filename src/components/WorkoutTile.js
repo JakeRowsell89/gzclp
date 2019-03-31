@@ -13,7 +13,7 @@ class Footer extends Component {
             <div className="tier">T{exercise.tier}</div>
             <div className="exercise">{exercise.name}</div>
             <div className="weight">{exercise.weight.amount} {exercise.weight.unit}</div>
-            <div className="reps">{exercise.reps}</div>
+            <div className="format">{exercise.format}</div>
           </div>
         ))}
       </div>
