@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import WorkoutTile from '../WorkoutTile'
+import "./Workout.css"
 
 class Workout extends Component {
   render() {
-    console.log(this.props.location.state)
+    const { workout } = this.props.location.state
+    console.log(workout)
     return (
-      <div className="App-page">
-        worky
+      <div className="Workout-page">
+        {
+          workout.exercises.map((exercise, i) => (
+            <div className="exercise" key={i}>
+              <div className="info">
+                <div className="name">{exercise.name}</div>
+                <div className="reps">{exercise.reps}</div>
+                <div className="weight">{exercise.weight.amount}{exercise.weight.unit}</div>
+              </div>
+              <div className="interactive"></div>
+            </div>
+          ))
+        }
+        <div className="">
+        </div>
       </div>
-
     )
   }
 }

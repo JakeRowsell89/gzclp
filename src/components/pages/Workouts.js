@@ -6,11 +6,11 @@ import workouts from '../../fixtures/workouts'
 class Workouts extends Component {
   render() {
     return (
-      <div className="App-page">
+      <div className="Workouts-page">
         {
           workouts.slice(0, 3).map((workout, i) => {
             return i === 0 ?
-              <Link to={{ pathname: "/workout", state: { workout } }}><WorkoutTile key={i} workout={workout} /></Link> :
+              <Link key={i} to={{ pathname: "/workout", state: { workout } }}><WorkoutTile key={i} workout={workout} /></Link> :
               <WorkoutTile key={i} workout={workout} />
           })
         }
