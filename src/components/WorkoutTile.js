@@ -4,7 +4,6 @@ import './WorkoutTile.css';
 
 class Footer extends Component {
   render() {
-    console.log('rerender with props', this.props.workout)
     return (
       <div className="Workout-tile">
         <div className="date">{this.props.workout.date ? this.props.workout.date : 'Next'}</div>

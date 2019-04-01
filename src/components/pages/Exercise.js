@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import EmojiButton from '../buttons/EmojiButton'
+import Countdown from '../Countdown'
 
 import "./Exercise.css"
 
@@ -39,7 +40,7 @@ class Exercise extends Component {
     this.startExercise = this.startExercise.bind(this);
     this.passSet = this.passSet.bind(this);
     this.failSet = this.failSet.bind(this);
-    this.skipRest = this.skipRest.bind(this);
+    this.finishRest = this.finishRest.bind(this);
   }
 
   startExercise() {
@@ -49,7 +50,6 @@ class Exercise extends Component {
   }
 
   failSet() {
-
     this.setState(state => ({
       exerciseStatus: state.failedSets + state.passedSets + 1 < state.sets ? exerciseStatuses.slice(1, 2).pop() : exerciseStatuses.slice(2, 3).pop(),
       failedSets: state.failedSets + 1
@@ -63,7 +63,7 @@ class Exercise extends Component {
     }));
   }
 
-  skipRest() {
+  finishRest() {
     this.setState(state => ({
       exerciseStatus: exerciseStatuses.slice(0, 1).pop()
     }));
@@ -88,7 +88,7 @@ class Exercise extends Component {
             this.state.exerciseStatus === 'STARTED' && (<div><EmojiButton emoji="✅" clickHandler={this.passSet} /> <EmojiButton emoji="❌" clickHandler={this.failSet} /></div>)
           }
           {
-            this.state.exerciseStatus === 'REST' && <EmojiButton emoji="⏩" clickHandler={this.skipRest} />
+            this.state.exerciseStatus === 'REST' && <Countdown duration={90} finishRest={this.finishRest} />
           }
           {
             this.state.exerciseStatus === 'COMPLETE' && <div>Completed!</div>
