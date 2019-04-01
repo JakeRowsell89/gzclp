@@ -9,7 +9,9 @@ class Footer extends Component {
     console.log('rerender')
     return (
       <footer className="App-footer">
-        <Link to={PATHS.workouts}>Workouts</Link>
+        <Link to={PATHS.workouts}>
+          <span role="img" aria-label="workouts">💪</span>
+        </Link>
       </footer>
     )
   }
