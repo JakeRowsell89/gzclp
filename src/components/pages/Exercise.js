@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import EmojiButton from '../buttons/EmojiButton'
+
 import "./Exercise.css"
 
 function parseExerciseFormat(format) {
@@ -78,16 +80,15 @@ class Exercise extends Component {
         </div>
         <div className="interactive">
           <div>Sets <span className="passedSets">{this.state.passedSets}</span>{this.state.failedSets > 0 && <span className="failedSets"> + {this.state.failedSets}</span>} / {this.state.sets}</div>
-          <div>Reps {this.state.reps}</div>
-          <div>AMRAP {this.state.isAMRAP}</div>
+          <div>Reps {this.state.isAMRAP && this.state.passedSets + this.state.failedSets === this.state.sets - 1 ? "AMRAP" : this.state.reps}</div>
           {
-            !this.state.exerciseStatus && <button onClick={this.startExercise}>▶️</button>
+            !this.state.exerciseStatus && <EmojiButton emoji="▶️" clickHandler={this.startExercise} />
           }
           {
-            this.state.exerciseStatus === 'STARTED' && (<div><button onClick={this.passSet}>✅</button> <button onClick={this.failSet}>❌</button></div>)
+            this.state.exerciseStatus === 'STARTED' && (<div><EmojiButton emoji="✅" clickHandler={this.passSet} /> <EmojiButton emoji="❌" clickHandler={this.failSet} /></div>)
           }
           {
-            this.state.exerciseStatus === 'REST' && <div><button onClick={this.skipRest}>⏩</button></div>
+            this.state.exerciseStatus === 'REST' && <EmojiButton emoji="⏩" clickHandler={this.skipRest} />
           }
           {
             this.state.exerciseStatus === 'COMPLETE' && <div>Completed!</div>

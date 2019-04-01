@@ -26,3 +26,12 @@
 .Workout-page .failedSets {
   color: red;
 }
+
+.Workout-page button {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 3vh;
+  margin: 0 10px;
+}
