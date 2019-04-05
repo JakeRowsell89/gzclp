@@ -4,9 +4,10 @@
 
 .Workout-page .exercise {
   min-height: 20vh;
-  margin: 5vh;
-  min-width: 90vw;
+  margin: 4vh;
+  min-width: 80vw;
   padding: 1vh;
   border: 1px solid;
   color: white;
+  border-radius: 1vh;
 }

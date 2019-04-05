@@ -74,8 +74,7 @@ class Exercise extends Component {
     return (
       <div className="exercise" >
         <div className="info">
-          <div className="name">{exercise.name}</div>
-          <div className="format">{exercise.format}</div>
+          <div className="name">T{exercise.tier} {exercise.name}</div>
           <div className="weight">{exercise.weight.amount}{exercise.weight.unit}</div>
         </div>
         <div className="interactive">
