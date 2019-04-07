@@ -10,7 +10,7 @@ class Workout extends Component {
   }
   render() {
     const { workout } = this.props.location.state
-    console.log(workout)
+
     return (
       <div className="Workout-page">
         {

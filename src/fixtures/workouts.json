@@ -1,45 +1,5 @@
 [
   {
-    "day": 1,
-    "completed": false,
-    "date": null,
-    "exercises": [
-      {
-        "completed": false,
-        "tier": 1,
-        "stage": 1,
-        "name": "Squat",
-        "format": "5x3",
-        "weight": {
-          "amount": 80,
-          "unit": "kg"
-        }
-      },
-      {
-        "completed": false,
-        "tier": 2,
-        "stage": 1,
-        "name": "Bench Press",
-        "format": "3x10",
-        "weight": {
-          "amount": 52.5,
-          "unit": "kg"
-        }
-      },
-      {
-        "completed": false,
-        "tier": 3,
-        "stage": 1,
-        "name": "Lat Pulldown",
-        "format": "3x15+",
-        "weight": {
-          "amount": 40,
-          "unit": "kg"
-        }
-      }
-    ]
-  },
-  {
     "day": 4,
     "completed": true,
     "date": "2019-04-07T13:35:56.660Z",

@@ -70,7 +70,7 @@ class Exercise extends Component {
   }
   render() {
     const exercise = this.state.exercise
-    console.log(this.state)
+
     return (
       <div className="exercise" >
         <div className="info">

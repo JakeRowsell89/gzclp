@@ -6,7 +6,6 @@ import { PATHS } from '../constants'
 
 class Footer extends Component {
   render() {
-    console.log('rerender')
     return (
       <footer className="App-footer">
         <Link to={PATHS.workouts}>

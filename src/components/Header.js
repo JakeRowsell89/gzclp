@@ -10,7 +10,6 @@ import { PAGE_PATHS, PATHS } from '../constants'
 
 class Header extends Component {
   render() {
-    console.log('rendering header')
     return (
       <header className="App-header">
         <Route exact path={

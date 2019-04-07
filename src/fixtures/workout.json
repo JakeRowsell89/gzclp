@@ -21,7 +21,7 @@
       "name": "Bench Press",
       "format": "3x10",
       "weight": {
-        "amount": 50,
+        "amount": 52.5,
         "unit": "kg"
       }
     },
@@ -32,7 +32,7 @@
       "name": "Lat Pulldown",
       "format": "3x15+",
       "weight": {
-        "amount": 35,
+        "amount": 40,
         "unit": "kg"
       }
     }
