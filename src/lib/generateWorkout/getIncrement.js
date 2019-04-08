@@ -6,6 +6,7 @@ const increments = {
   'Overhead Press': 2.5,
   'Dumbbell Row': 2
 }
+
 module.exports = function (exercise) {
   return increments[exercise]
 }

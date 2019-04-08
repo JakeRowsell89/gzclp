@@ -1,3 +1,6 @@
+Todo:
+- Complete workout -> add current workout to saved workouts
+
 CI:
 https://circleci.com/gh/JakeRowsell89
 
