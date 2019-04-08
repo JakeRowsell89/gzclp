@@ -1,4 +1,4 @@
-module.exports = {
+const exercisesForDay = {
   4: [
     {
       "completed": false,
@@ -68,3 +68,9 @@ module.exports = {
     }
   ]
 }
+
+function getExercisesForDay(day) {
+  return exercisesForDay[day]
+}
+
+export default getExercisesForDay

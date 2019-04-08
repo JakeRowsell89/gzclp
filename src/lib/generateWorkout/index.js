@@ -1,8 +1,9 @@
+import getExercisesForDay from './getExercisesForDay'
+import getFormat from './getFormat'
+import getNextStage from './getNextStage'
+import getNextWeight from './getNextWeight'
+
 const routineDays = 4 // Magic number for days in routine, possibly changeable if other routines supported
-const daysToExercises = require('./getExercisesForDay')
-const getFormat = require('./getFormat')
-const getNextStage = require('./getNextStage')
-const getNextWeight = require('./getNextWeight')
 
 function unBasedExercise(exercise) {
   return {
@@ -42,10 +43,6 @@ function addWeightsToExercises(exercises, previousWorkouts, day) {
   }
 }
 
-function getExercisesForDay(day) {
-  return daysToExercises[day]
-}
-
 function nextDay(previousWorkouts) {
   const nextDay = previousWorkouts[0].day + 1
 
@@ -65,5 +62,4 @@ function generateWorkout(previousWorkouts) {
   }
 }
 
-// export default generateWorkout
-module.exports = generateWorkout
+export default generateWorkout

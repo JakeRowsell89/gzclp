@@ -8,4 +8,4 @@ function getNextStage({ completed, stage, tier }) {
   }
 }
 
-module.exports = getNextStage
+export default getNextStage

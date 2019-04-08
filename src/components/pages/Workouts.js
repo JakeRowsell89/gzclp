@@ -6,10 +6,14 @@ import generateWorkout from './../../lib'
 
 class Workouts extends Component {
   render() {
+    console.log(workouts)
+    console.log(generateWorkout)
+    const x = generateWorkout(workouts)
+    console.log(x)
     return (
       <div className="Workouts-page">
         {
-          [generateWorkout(workouts)]
+          [x]
             .concat(workouts)
             .slice(0, 3)
             .map((workout, i) => {

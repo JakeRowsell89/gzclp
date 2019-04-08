@@ -1,4 +1,4 @@
-const getIncrement = require('./getIncrement')
+import getIncrement from './getIncrement'
 
 function getNextWeight(previousWorkoutsOnDay, previousWeight, completedPrevious, exercise, tier, stage) {
   if (completedPrevious) {
@@ -20,4 +20,4 @@ function getNextWeight(previousWorkoutsOnDay, previousWeight, completedPrevious,
   }
 }
 
-module.exports = getNextWeight
+export default getNextWeight

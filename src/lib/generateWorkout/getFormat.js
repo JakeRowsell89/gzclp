@@ -16,6 +16,8 @@ const formats = {
   }
 }
 
-module.exports = function (tier, stage) {
+function getFormat(tier, stage) {
   return formats[tier][stage]
 }
+
+export default getFormat

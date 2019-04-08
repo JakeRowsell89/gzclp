@@ -1,3 +1,3 @@
-const generateWorkout = require('./generateWorkout')
+import generateWorkout from './generateWorkout'
 
 export default generateWorkout

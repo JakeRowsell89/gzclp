@@ -7,6 +7,8 @@ const increments = {
   'Dumbbell Row': 2
 }
 
-module.exports = function (exercise) {
+function getIncrement(exercise) {
   return increments[exercise]
 }
+
+export default getIncrement
