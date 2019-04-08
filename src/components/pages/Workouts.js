@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import WorkoutTile from '../WorkoutTile'
 import workouts from '../../fixtures/workouts.json'
-import generateWorkout from './../../lib/index'
+import generateWorkout from './../../lib'
 
 class Workouts extends Component {
   render() {
