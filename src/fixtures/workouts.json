@@ -1,5 +1,45 @@
 [
   {
+    "day": 2,
+    "completed": true,
+    "date": "2019-04-11T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": true,
+        "tier": 1,
+        "stage": 1,
+        "name": "Overhead Press",
+        "format": "5x3",
+        "weight": {
+          "amount": 52.5,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": true,
+        "tier": 2,
+        "stage": 1,
+        "name": "Deadlift",
+        "format": "3x10",
+        "weight": {
+          "amount": 80,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": true,
+        "tier": 3,
+        "stage": 1,
+        "name": "Dumbbell Row",
+        "format": "3x15+",
+        "weight": {
+          "amount": 16,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
     "day": 1,
     "completed": true,
     "date": "2019-04-09T13:35:56.660Z",
