@@ -38,3 +38,10 @@
   min-width: 15vw;
   text-align: left;
 }
+
+.Workout-tile.complete {
+  border-color: green;
+}
+.Workout-tile.complete .tile-row.incomplete {
+  color: red;
+}
