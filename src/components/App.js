@@ -8,6 +8,7 @@ import Settings from './pages/Settings'
 import Workouts from './pages/Workouts'
 import Workout from './pages/Workout'
 import Goals from './pages/Goals'
+import History from './pages/History'
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path="/workouts" component={Workouts} />
             <Route path="/workout" component={Workout} />
             <Route path="/goals" component={Goals} />
+            <Route path="/history" component={History} />
           </div>
           <Footer />
         </div>
