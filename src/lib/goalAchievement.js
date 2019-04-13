@@ -1,5 +1,9 @@
+function goalCompletionPercentage(achieved, target) {
+  return Math.min(100, Math.floor((achieved / target) * 100))
+}
+
 export default function goalAchievement(goal, workouts) {
-  return Object.entries(goal.exercises).map(([exercise, weight, ...x]) => {
+  return Object.entries(goal.exercises).map(([exercise, weight]) => {
     const achievedWeights = workouts
       .map(w => w.exercises)
       .map(e =>
@@ -12,8 +16,8 @@ export default function goalAchievement(goal, workouts) {
       tier: goal.tier,
       exercise,
       goal: weight,
-      achieved: maxAchievedWeight,
-      accomplished: maxAchievedWeight >= goal
+      achieved: maxAchievedWeight >= weight,
+      completionPercentage: goalCompletionPercentage(maxAchievedWeight, weight)
     }
   })
 }

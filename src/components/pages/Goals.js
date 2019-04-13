@@ -17,13 +17,13 @@ class Goals extends Component {
                   goalTier.map((goal, j) =>
                     goal.goal &&
                     (
-                      <div key={j} className={goal.accomplished ? "goal accomplished" : "goal"}>
+                      <div key={j} className={goal.achieved ? "goal accomplished" : "goal"}>
                         <div className="exercise">
                           {goal.exercise}
                           {goal.accomplished && <span role="img" aria-label="green-tick"> ✅</span>}
                         </div>
-                        <div className="achieved">{goal.achieved}kg</div>
-                        <div className="target">{goal.goal}kg</div>
+                        <div className="achieved">{goal.completionPercentage}%</div>
+                        <div className="target">🎯{goal.goal}kg</div>
                       </div>
                     )
                   )
