@@ -11,6 +11,9 @@ class Footer extends Component {
         <Link to={PATHS.workouts}>
           <span role="img" aria-label="workouts">💪</span>
         </Link>
+        <Link to={PATHS.goals}>
+          <span role="img" aria-label="goals">🎯</span>
+        </Link>
       </footer>
     )
   }

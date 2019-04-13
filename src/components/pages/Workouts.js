@@ -2,18 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import WorkoutTile from '../WorkoutTile'
 import workouts from '../../fixtures/workouts.json'
-import generateWorkout from './../../lib'
+import { generateWorkout } from './../../lib'
 
 class Workouts extends Component {
   render() {
-    console.log(workouts)
-    console.log(generateWorkout)
-    const x = generateWorkout(workouts)
-    console.log(x)
     return (
       <div className="Workouts-page">
         {
-          [x]
+          [generateWorkout(workouts)]
             .concat(workouts)
             .slice(0, 3)
             .map((workout, i) => {

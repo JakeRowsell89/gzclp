@@ -1,0 +1,27 @@
+[
+  {
+    "tier": 1,
+    "exercises": {
+      "Squat": 110,
+      "Deadlift": 140,
+      "Bench Press": 80,
+      "Overhead Press": 60
+    }
+  },
+  {
+    "tier": 2,
+    "exercises": {
+      "Squat": null,
+      "Deadlift": null,
+      "Bench Press": null,
+      "Overhead Press": null
+    }
+  },
+  {
+    "tier": 3,
+    "exercises": {
+      "Lat Pulldown": 50,
+      "Dumbbell Row": 20
+    }
+  }
+]

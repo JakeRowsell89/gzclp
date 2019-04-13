@@ -1,0 +1,38 @@
+.Goals-page {
+
+}
+
+.Goals-page .tier {
+  min-height: 20vh;
+  margin: 5vh;
+  min-width: 90vw;
+  padding: 1vh;
+  border: 1px solid;
+  color: white;
+}
+
+.Goals-page .goal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  min-height: 5vh;
+  font-size: calc(9px + 2vmin);
+}
+
+.Goals-page .goal.accomplished {
+  color: green;
+}
+
+.Goals-page .goal .exercise {
+  min-width: 50vw;
+}
+
+.Goals-page .goal .achieved {
+  min-width: 15vw;
+  text-align: right; 
+}
+.Goals-page .goal .target {
+  min-width: 10vw;
+  text-align: right;
+}

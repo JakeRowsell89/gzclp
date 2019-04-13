@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Settings from './pages/Settings'
 import Workouts from './pages/Workouts'
 import Workout from './pages/Workout'
+import Goals from './pages/Goals'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path="/settings" component={Settings} />
             <Route path="/workouts" component={Workouts} />
             <Route path="/workout" component={Workout} />
+            <Route path="/goals" component={Goals} />
           </div>
           <Footer />
         </div>
