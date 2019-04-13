@@ -1,70 +1,72 @@
+import { EXERCISES } from '../../constants'
+
 const exercisesForDay = {
   4: [
     {
       "completed": false,
       "tier": 1,
-      "name": "Deadlift",
+      "name": EXERCISES.DEADLIFT,
     },
     {
       "completed": false,
       "tier": 2,
-      "name": "Overhead Press",
+      "name": EXERCISES.OHP,
     },
     {
       "completed": false,
       "tier": 3,
-      "name": "Dumbbell Row",
+      "name": EXERCISES.DUMBELL_ROW,
     }
   ],
   3: [
     {
       "completed": false,
       "tier": 1,
-      "name": "Bench Press",
+      "name": EXERCISES.BENCH,
     },
     {
       "completed": false,
       "tier": 2,
-      "name": "Squat"
+      "name": EXERCISES.SQUAT
     },
     {
       "completed": false,
       "tier": 3,
-      "name": "Lat Pulldown"
+      "name": EXERCISES.LAT_PULLDOWN
     }
   ],
   2: [
     {
       "completed": false,
       "tier": 1,
-      "name": "Overhead Press",
+      "name": EXERCISES.OHP,
     },
     {
       "completed": false,
       "tier": 2,
-      "name": "Deadlift",
+      "name": EXERCISES.DEADLIFT,
     },
     {
       "completed": false,
       "tier": 3,
-      "name": "Dumbbell Row",
+      "name": EXERCISES.DUMBELL_ROW,
     }
   ],
   1: [
     {
       "completed": false,
       "tier": 1,
-      "name": "Squat",
+      "name": EXERCISES.SQUAT,
     },
     {
       "completed": false,
       "tier": 2,
-      "name": "Bench Press",
+      "name": EXERCISES.BENCH,
     },
     {
       "completed": false,
       "tier": 3,
-      "name": "Lat Pulldown",
+      "name": EXERCISES.LAT_PULLDOWN,
     }
   ]
 }
