@@ -31,9 +31,23 @@
 
 .Goals-page .goal .achieved {
   min-width: 15vw;
-  text-align: right; 
+  text-align: center; 
+  z-index: 1;
+  position: relative;
 }
 .Goals-page .goal .target {
-  min-width: 10vw;
+  min-width: 15vw;
   text-align: right;
+}
+
+.Goals-page .progress-wrapper{
+  position: relative;
+}
+
+.Goals-page .progress-bar {
+  position: absolute;
+  background: green;
+  height: 70%;
+  width: 50%;
+  top: 0;
 }

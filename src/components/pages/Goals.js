@@ -22,7 +22,10 @@ class Goals extends Component {
                           {goal.exercise}
                           {goal.accomplished && <span role="img" aria-label="green-tick"> ✅</span>}
                         </div>
-                        <div className="achieved">{goal.completionPercentage}%</div>
+                        <div class="progress-wrapper">
+                          <div className="achieved">{goal.completionPercentage}%</div>
+                          <div className="progress-bar" style={{ width: goal.completionPercentage + "%", background: goal.completionPercentage < 70 ? "peru" : "green" }}></div>
+                        </div>
                         <div className="target"><span role="img" aria-label="target">🎯</span>{goal.goal}kg</div>
                       </div>
                     )
