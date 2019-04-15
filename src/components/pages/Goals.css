@@ -34,14 +34,17 @@
   text-align: center; 
   z-index: 1;
   position: relative;
+  height: 70%;
+  background: #ffffff1a;
 }
 .Goals-page .goal .target {
-  min-width: 15vw;
+  min-width: 20vw;
   text-align: right;
 }
 
 .Goals-page .progress-wrapper{
   position: relative;
+  min-width: 20vw;
 }
 
 .Goals-page .progress-bar {
