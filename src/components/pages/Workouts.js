@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import WorkoutTile from '../WorkoutTile'
-import workouts from '../../fixtures/workouts.json'
+import { connect } from 'react-redux'
 import { generateWorkout } from './../../lib'
 
 class Workouts extends Component {
   render() {
+    const workouts = this.props.workouts
+    const generatedWorkouts = workouts.length ? [generateWorkout(workouts)] : []
+
     return (
       <div className="Workouts-page">
         {
-          [generateWorkout(workouts)]
+          generatedWorkouts
             .concat(workouts)
             .slice(0, 3)
             .map((workout, i) => {
@@ -23,4 +26,12 @@ class Workouts extends Component {
   }
 }
 
-export default Workouts
+
+function mapStateToProps(state) {
+  return {
+    ...state,
+    workouts: state.workouts
+  }
+}
+
+export default connect(mapStateToProps)(Workouts)

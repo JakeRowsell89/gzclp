@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
+import { connect } from 'react-redux'
+
 import Header from './Header'
 import Footer from './Footer'
 import Home from './pages/Home'
@@ -10,7 +11,18 @@ import Workout from './pages/Workout'
 import Goals from './pages/Goals'
 import History from './pages/History'
 
+import store from '../lib/store'
+import init from '../lib/initialize'
+
+import './App.css';
+
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    init(store)
+  }
+
   render() {
     return (
       <Router>
@@ -31,4 +43,8 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return state
+}
+
+export default connect(mapStateToProps)(App)
