@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import goals from '../../fixtures/goals'
-import workouts from '../../fixtures/workouts'
+import { connect } from 'react-redux'
+
 import goalAchievement from '../../lib/goalAchievement'
 import './Goals.css'
 
@@ -9,10 +9,11 @@ class Goals extends Component {
     super(props)
   }
   render() {
+    const workouts = this.props.workouts
     return (
       <div className="Goals-page">
         {
-          goals
+          this.props.goals
             .map(goal => goalAchievement(goal, workouts))
             .map((goalTier, i) => {
               return goalTier.find(g => g.goal) && (
@@ -42,4 +43,11 @@ class Goals extends Component {
   }
 }
 
-export default Goals
+function mapStateToProps(state) {
+  return {
+    workouts: state.workouts,
+    goals: state.goals
+  }
+}
+
+export default connect(mapStateToProps)(Goals)

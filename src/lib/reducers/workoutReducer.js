@@ -1,9 +1,11 @@
 const workoutReducer = (state, action) => {
+  console.log(state)
+  console.log(action.type)
   switch (action.type) {
     case 'LOAD_WORKOUTS':
-      return action.payload
+      return state.concat(action.payload)
     default:
-      return []
+      return state || []
   }
 
 }

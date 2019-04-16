@@ -1,18 +1,10 @@
 import { combineReducers } from 'redux'
 import workoutReducer from './workoutReducer'
-
-const initializeReducer = (state = [], action) => {
-  switch (action.type) {
-    case 'INITIALIZE':
-      return state.concat(action.payload)
-    default:
-      return state
-  }
-}
+import goalReducer from './goalReducer'
 
 const rootReducer = combineReducers({
-  initialize: initializeReducer,
-  workouts: workoutReducer
+  workouts: workoutReducer,
+  goals: goalReducer,
 })
 
 export default rootReducer
