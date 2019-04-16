@@ -19,7 +19,6 @@ class Workouts extends Component {
             })
         }
       </div>
-
     )
   }
 }
