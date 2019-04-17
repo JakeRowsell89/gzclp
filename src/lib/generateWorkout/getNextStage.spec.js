@@ -8,7 +8,7 @@ const singleStageTier = 3
 describe('getNextStage', () => {
   it('stays on the same stage when the previous workout was completed', () => {
     const stage = 0
-    expect(getNextStage({ completed: true, stage: stage })).toEqual(stage)
+    expect(getNextStage({ completed: true, stage: stage, tier: normalTier })).toEqual(stage)
   })
   it('stays on the same stage when in tier 3 regardless of completion', () => {
     const stage = 0
