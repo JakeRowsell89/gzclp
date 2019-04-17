@@ -5,9 +5,6 @@ import goalAchievement from '../../lib/goalAchievement'
 import './Goals.css'
 
 class Goals extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     const workouts = this.props.workouts
     return (
