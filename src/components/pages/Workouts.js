@@ -3,17 +3,27 @@ import { Link } from 'react-router-dom'
 import WorkoutTile from '../WorkoutTile'
 import { connect } from 'react-redux'
 import { generateWorkout } from './../../lib'
+import activateWorkout from '../../lib/actions/activateWorkout'
+import store from '../../lib/store'
 
 class Workouts extends Component {
-  render() {
-    const workouts = this.props.workouts
-    const generatedWorkouts = workouts.length ? [generateWorkout(workouts)] : []
+  constructor(props) {
+    super(props)
 
+    if (!props.workouts.activeWorkout) {
+      // throw if no workouts
+      const activeWorkout = generateWorkout(props.workouts)
+      this.combinedWorkouts = [activeWorkout].concat(props.workouts)
+      store.dispatch(activateWorkout(activeWorkout))
+    } else {
+      this.combinedWorkouts = props.workouts
+    }
+  }
+  render() {
     return (
-      <div className="Workouts-page">
+      <div className="Workouts-page" >
         {
-          generatedWorkouts
-            .concat(workouts)
+          this.combinedWorkouts
             .slice(0, 3)
             .map((workout, i) => {
               return i === 0 ?
