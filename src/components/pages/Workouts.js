@@ -16,7 +16,7 @@ class Workouts extends Component {
       this.combinedWorkouts = [activeWorkout].concat(props.workouts)
       store.dispatch(activateWorkout(activeWorkout))
     } else {
-      this.combinedWorkouts = props.workouts
+      this.combinedWorkouts = [props.workouts.activeWorkout].concat(props.workouts)
     }
   }
   render() {

@@ -6,15 +6,19 @@ import "./Workout.css"
 class Workout extends Component {
   constructor(props) {
     super(props)
-    this.inProgress = false
+    const { workout } = this.props.location.state || {}
+    this.workout = workout
+    if (!workout) {
+      window.open('/')
+    }
   }
   render() {
-    const { workout } = this.props.location.state
+
 
     return (
       <div className="Workout-page">
         {
-          workout.exercises.map((exercise, i) => (
+          this.workout.exercises.map((exercise, i) => (
             <Exercise key={i} exercise={exercise} />
           ))
         }
