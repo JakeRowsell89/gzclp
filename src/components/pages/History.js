@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import WorkoutTile from '../WorkoutTile'
-import workouts from '../../fixtures/workouts.json'
 
 import './History.css'
 class History extends Component {
@@ -8,12 +8,17 @@ class History extends Component {
     return (
       <div className="History-page">
         {
-          workouts.map((workout, i) => <WorkoutTile key={i} workout={workout} />
-          )
+          this.props.workouts.map((workout, i) => <WorkoutTile key={i} workout={workout} />)
         }
       </div>
     )
   }
 }
 
-export default History
+function mapStateToProps(state) {
+  return {
+    workouts: state.workouts,
+  }
+}
+
+export default connect(mapStateToProps)(History)
