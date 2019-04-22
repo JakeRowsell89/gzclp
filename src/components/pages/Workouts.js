@@ -27,7 +27,7 @@ class Workouts extends Component {
             .slice(0, 3)
             .map((workout, i) => {
               return i === 0 ?
-                <Link key={i} to={{ pathname: "/workout", state: { workout } }}><WorkoutTile key={i} workout={workout} /></Link> :
+                <Link key={i} to={{ pathname: "/workout", workout }}><WorkoutTile key={i} workout={workout} /></Link> :
                 <WorkoutTile key={i} workout={workout} />
             })
         }

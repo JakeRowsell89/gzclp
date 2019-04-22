@@ -6,7 +6,7 @@ import "./Workout.css"
 class Workout extends Component {
   constructor(props) {
     super(props)
-    const { workout } = this.props.location.state || {}
+    const workout = this.props.location.workout || {}
     this.workout = workout
     if (!workout) {
       window.open('/')
