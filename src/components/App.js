@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Header from './Header'
@@ -14,7 +14,7 @@ import History from './pages/History'
 import store from '../lib/store'
 import init from '../lib/initialize'
 
-import './App.css';
+import './App.css'
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class App extends Component {
           <Footer />
         </div>
       </Router>
-    );
+    )
   }
 }
 

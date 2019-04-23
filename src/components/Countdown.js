@@ -1,18 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import EmojiButton from './buttons/EmojiButton'
-import './Countdown.css';
-
+import './Countdown.css'
 
 class Countdown extends Component {
   constructor(props) {
     super(props)
-    this.state = { startTime: Number(new Date()), duration: props.duration, remaining: props.duration }
-    let interval = setInterval(() => {
+    this.state = {
+      startTime: Number(new Date()),
+      duration: props.duration,
+      remaining: props.duration,
+    }
+    const interval = setInterval(() => {
       let elapsed = Number(new Date()) - this.state.startTime
       elapsed = (elapsed - (elapsed % 1000)) / 1000
 
-      this.setState((state) => ({
-        remaining: state.duration - elapsed
+      this.setState(state => ({
+        remaining: state.duration - elapsed,
       }))
 
       if (elapsed >= this.state.duration) {
@@ -21,6 +25,7 @@ class Countdown extends Component {
       }
     }, 100)
   }
+
   render() {
     return (
       <div>
@@ -29,6 +34,11 @@ class Countdown extends Component {
       </div>
     )
   }
+}
+
+Countdown.propTypes = {
+  duration: PropTypes.number,
+  finishRest: PropTypes.func,
 }
 
 export default Countdown
