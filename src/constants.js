@@ -1,15 +1,15 @@
 export const PATHS = {
-  home: "/",
-  settings: "/settings",
-  workouts: "/workouts",
-  workout: "/workout",
-  goals: "/goals",
-  history: "/history"
-};
+  home: '/',
+  settings: '/settings',
+  workouts: '/workouts',
+  workout: '/workout',
+  goals: '/goals',
+  history: '/history',
+}
 
-export const TIERS = [1, 2, 3];
+export const TIERS = [1, 2, 3]
 
-export const STAGES = [1, 2, 3];
+export const STAGES = [1, 2, 3]
 
 export const PAGE_PATHS = [
   PATHS.home,
@@ -17,14 +17,16 @@ export const PAGE_PATHS = [
   PATHS.workouts,
   PATHS.goals,
   PATHS.history,
-  PATHS.workout
-];
+  PATHS.workout,
+]
 
 export const EXERCISES = {
-  SQUAT: "Squat",
-  DEADLIFT: "Deadlift",
-  BENCH: "Bench Press",
-  OHP: "Overhead Press",
-  LAT_PULLDOWN: "Lat Pulldown",
-  DUMBELL_ROW: "Dumbbell Row"
-};
+  SQUAT: 'Squat',
+  DEADLIFT: 'Deadlift',
+  BENCH: 'Bench Press',
+  OHP: 'Overhead Press',
+  LAT_PULLDOWN: 'Lat Pulldown',
+  DUMBELL_ROW: 'Dumbbell Row',
+}
+
+export const T2_INCREMENT = 7.5
