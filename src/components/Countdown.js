@@ -6,26 +6,31 @@ import './Countdown.css'
 class Countdown extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      startTime: Number(new Date()),
-      duration: props.duration,
-      remaining: props.duration,
-    }
-    const interval = setInterval(() => {
-      let elapsed = Number(new Date()) - this.state.startTime
+    this.stopUpdating = false
+
+    this.startTime = Number(new Date())
+    this.duration = props.duration
+    this.state = { remaining: props.duration }
+
+    this.interval = setInterval(() => {
+      let elapsed = Number(new Date()) - this.startTime
       elapsed = (elapsed - (elapsed % 1000)) / 1000
 
-      this.setState(state => ({
-        remaining: state.duration - elapsed,
-      }))
+      if (!this.stopUpdating) {
+        this.setState(() => ({
+          remaining: this.duration - elapsed,
+        }))
 
-      if (elapsed >= this.state.duration) {
-        props.finishRest()
-        clearInterval(interval)
+        if (elapsed >= this.duration) {
+          props.finishRest()
+        }
       }
     }, 100)
   }
-
+  componentWillUnmount() {
+    this.stopUpdating = true
+    clearInterval(this.interval)
+  }
   render() {
     return (
       <div>
