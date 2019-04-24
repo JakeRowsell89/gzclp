@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import './WorkoutTile.css'
 
-class Footer extends Component {
+class WorkoutTile extends Component {
   render() {
     return (
       <div
@@ -37,13 +37,12 @@ class Footer extends Component {
   }
 }
 
-Footer.propTypes = {
-  workout: {
-    completed: PropTypes.bool,
-    day: PropTypes.number,
-    date: PropTypes.instanceOf(Date),
-    exercises: PropTypes.array,
-  },
+WorkoutTile.propTypes = {
+  workout: PropTypes.object,
+  'workout.completed': PropTypes.bool,
+  'workout.day': PropTypes.number,
+  'workout.date': PropTypes.instanceOf(Date),
+  'workout.exercises': PropTypes.array,
 }
 
-export default Footer
+export default WorkoutTile
