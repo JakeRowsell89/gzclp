@@ -2,9 +2,9 @@
   {
     "tier": 1,
     "exercises": {
-      "Squat": 115,
-      "Deadlift": 130,
-      "Bench Press": 85,
+      "Squat": 110,
+      "Deadlift": 125,
+      "Bench Press": 87.5,
       "Overhead Press": 60
     }
   },
