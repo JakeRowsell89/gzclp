@@ -11,8 +11,8 @@ function unBasedExercise(exercise) {
     format: getFormat(exercise.tier, 1),
     weight: {
       amount: null,
-      unit: 'kg'
-    }
+      unit: 'kg',
+    },
   }
 }
 
@@ -25,8 +25,10 @@ function addWeightsToExercises(exercises, previousWorkouts, day) {
     return exercises.map(unBasedExercise)
   } else {
     return exercises.map(e => {
-      const lastExerciseOnDay = lastWorkoutOnDay.exercises.find(le => le.name === e.name)
-      const stage = getNextStage(lastExerciseOnDay);
+      const lastExerciseOnDay = lastWorkoutOnDay.exercises.find(
+        le => le.name === e.name,
+      )
+      const stage = getNextStage(lastExerciseOnDay)
 
       return {
         completed: false,
@@ -36,8 +38,15 @@ function addWeightsToExercises(exercises, previousWorkouts, day) {
         format: getFormat(e.tier, stage),
         weight: {
           unit: 'kg',
-          amount: getNextWeight(previousWorkoutsOnDay, lastExerciseOnDay.weight.amount, lastExerciseOnDay.completed, e.name, e.tier, stage)
-        }
+          amount: getNextWeight(
+            previousWorkoutsOnDay,
+            lastExerciseOnDay.weight.amount,
+            lastExerciseOnDay.completed,
+            e.name,
+            e.tier,
+            stage,
+          ),
+        },
       }
     })
   }
@@ -49,13 +58,20 @@ function nextDay(previousWorkouts) {
   return nextDay > routineDays ? 1 : nextDay
 }
 
-function generateWorkout(previousWorkouts) {
-  const day = nextDay(previousWorkouts)
-  const exercises = getExercisesForDay(day)
-  const exercisesWithWeights = addWeightsToExercises(exercises, previousWorkouts, day)
+function generateWorkout(previousWorkouts, day) {
+  if (day !== undefined && typeof day !== 'number') {
+    throw new Error('Provided day was not a number')
+  }
+  const nextWorkoutDay = day || nextDay(previousWorkouts)
+  const exercises = getExercisesForDay(nextWorkoutDay)
+  const exercisesWithWeights = addWeightsToExercises(
+    exercises,
+    previousWorkouts,
+    nextWorkoutDay,
+  )
 
   return {
-    day,
+    day: nextWorkoutDay,
     exercises: exercisesWithWeights,
     completed: false,
     date: null,

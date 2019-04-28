@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import './WorkoutTile.css'
 
 class WorkoutTile extends Component {
   render() {
+    const day = this.props.workout.day
+
     return (
       <div
         className={`Workout-tile ${
@@ -12,9 +15,31 @@ class WorkoutTile extends Component {
         }`}
       >
         <div className="tile-row">
-          <div className="day">Day{this.props.workout.day}</div>
+          <div className="day">
+            Day
+            {(!this.props.workout.completed && (
+              <select defaultValue={day} onChange={this.props.changeHandler}>
+                {[1, 2, 3, 4].map((n, i) => {
+                  return (
+                    <option key={i} value={n}>
+                      {n}
+                    </option>
+                  )
+                })}
+              </select>
+            )) ||
+              day}
+          </div>
           <div className="date">
-            {this.props.workout.date ? this.props.workout.date : 'Next'}
+            {this.props.workout.date ? (
+              this.props.workout.date
+            ) : (
+              <Link to={{ pathname: '/workout', workout: this.props.workout }}>
+                <span role="img" aria-label="liftoff">
+                  🚀
+                </span>
+              </Link>
+            )}
           </div>
         </div>
         {this.props.workout.exercises.map((exercise, i) => (
