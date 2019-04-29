@@ -1,33 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 import Exercise from './Exercise'
 import './Workout.css'
 
-class Workout extends Component {
-  constructor(props) {
-    super(props)
-    const workout = this.props.location.workout || {}
-    this.workout = workout
-    if (!workout) {
-      window.open('/')
-    }
-  }
-  render() {
-    return (
-      <div className="Workout-page">
-        {this.workout.exercises.map((exercise, i) => (
-          <Exercise key={i} exercise={exercise} />
-        ))}
-        <div className="" />
-      </div>
-    )
-  }
-}
+const Workout = props => (
+  <div className="Workout-page">
+    {props.workout.exercises.map((exercise, i) => (
+      <Exercise key={i} exercise={exercise} />
+    ))}
+    <div className="" />
+  </div>
+)
 
 Workout.propTypes = {
-  location: PropTypes.object,
-  'location.workout': PropTypes.object,
+  workout: PropTypes.object,
+  'workout.exercises': PropTypes.array,
 }
 
-export default Workout
+function mapStateToProps(state) {
+  return {
+    ...state,
+    workout: state.activeWorkout,
+  }
+}
+
+export default connect(mapStateToProps)(Workout)
