@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import parseExerciseFormat from '../../lib/parseExerciseFormat'
-import EmojiButton from '../buttons/EmojiButton'
-import Countdown from '../Countdown'
+import parseExerciseFormat from '../lib/parseExerciseFormat'
+import EmojiButton from './buttons/EmojiButton'
+import Countdown from './Countdown'
 
 import './Exercise.css'
 
