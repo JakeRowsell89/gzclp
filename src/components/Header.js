@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Route } from 'react-router-dom'
 
 import './Header.css'
@@ -8,26 +8,24 @@ import CompleteWorkout from './buttons/CompleteWorkout'
 
 import { PAGE_PATHS, PATHS } from '../constants'
 
-class Header extends Component {
-  render() {
-    return (
-      <header className="App-header">
-        <Route
-          exact
-          path={PAGE_PATHS.filter(path => path !== PATHS.home)}
-          component={Back}
-        />
-        <Route
-          exact
-          path={PAGE_PATHS.filter(
-            path => path !== PATHS.settings && path !== PATHS.workout,
-          )}
-          component={Settings}
-        />
-        <Route exact path={PATHS.workout} component={CompleteWorkout} />
-      </header>
-    )
-  }
+const Header = () => {
+  return (
+    <header className="App-header">
+      <Route
+        exact
+        path={PAGE_PATHS.filter(path => path !== PATHS.home)}
+        component={Back}
+      />
+      <Route
+        exact
+        path={PAGE_PATHS.filter(
+          path => path !== PATHS.settings && path !== PATHS.workout,
+        )}
+        component={Settings}
+      />
+      <Route exact path={PATHS.workout} component={CompleteWorkout} />
+    </header>
+  )
 }
 
 export default Header
