@@ -16,9 +16,9 @@
         }
       },
       {
-        "completed": true,
+        "completed": false,
         "tier": 2,
-        "stage": 2,
+        "stage": 3,
         "name": "Deadlift",
         "format": "3x8",
         "weight": {

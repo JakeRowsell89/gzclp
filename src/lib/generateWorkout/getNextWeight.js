@@ -2,7 +2,7 @@ import getIncrement from './getIncrement'
 import { T2_INCREMENT } from '../../constants'
 
 function getNextWeight(
-  previousWorkoutsOnDay,
+  previousAttempts,
   previousWeight,
   completedPrevious,
   exercise,
@@ -19,17 +19,11 @@ function getNextWeight(
       return null // test a new weight
     } else {
       // find last stage 1 weight and add 7.5kg
-      const lastAchieved = previousWorkoutsOnDay.find(pw =>
-        pw.exercises.find(
-          e => e.name === exercise && e.stage === 1 && e.completed,
-        ),
+      const lastAchieved = previousAttempts.find(
+        e => e.name === exercise && e.stage === 1 && e.completed,
       )
-      return (
-        lastAchieved &&
-        lastAchieved.exercises.find(
-          e => e.name === exercise && e.stage === 1 && e.completed,
-        ).weight.amount + T2_INCREMENT
-      )
+
+      return lastAchieved && lastAchieved.weight.amount + T2_INCREMENT
     }
   } else {
     // stage must have switched or non-25 amrap set

@@ -16,39 +16,42 @@ function unBasedExercise(exercise) {
   }
 }
 
-function addWeightsToExercises(exercises, previousWorkouts, day) {
-  // note this assumes a fixed routine, changing the contents of a day WILL break this
-  const previousWorkoutsOnDay = previousWorkouts.filter(pw => pw.day === day)
-  const lastWorkoutOnDay = previousWorkoutsOnDay[0]
-  if (!lastWorkoutOnDay) {
-    // throw new Error('No workout history, new starter will require testing')
-    return exercises.map(unBasedExercise)
-  } else {
-    return exercises.map(e => {
-      const lastExerciseOnDay = lastWorkoutOnDay.exercises.find(
-        le => le.name === e.name,
+function addWeightsToExercise(exercise, previousWorkouts) {
+  const previousExercises = previousWorkouts
+    .map(pw => pw.exercises)
+    .reduce((p, c) => {
+      const x = c.find(
+        e => e.name === exercise.name && e.tier === exercise.tier,
       )
-      const stage = getNextStage(lastExerciseOnDay)
+      return x ? p.concat(x) : p
+    }, [])
+  // get first element
+  const lastExercise = previousExercises[0]
 
-      return {
-        completed: false,
-        tier: e.tier,
-        name: e.name,
-        stage,
-        format: getFormat(e.tier, stage),
-        weight: {
-          unit: 'kg',
-          amount: getNextWeight(
-            previousWorkoutsOnDay,
-            lastExerciseOnDay.weight.amount,
-            lastExerciseOnDay.completed,
-            e.name,
-            e.tier,
-            stage,
-          ),
-        },
-      }
-    })
+  if (!lastExercise) {
+    // throw new Error('No workout history, new starter will require testing')
+    return unBasedExercise(exercise)
+  } else {
+    const stage = getNextStage(lastExercise)
+
+    return {
+      completed: false,
+      tier: exercise.tier,
+      name: exercise.name,
+      stage,
+      format: getFormat(exercise.tier, stage),
+      weight: {
+        unit: 'kg',
+        amount: getNextWeight(
+          previousExercises,
+          lastExercise.weight.amount,
+          lastExercise.completed,
+          exercise.name,
+          exercise.tier,
+          stage,
+        ),
+      },
+    }
   }
 }
 
@@ -64,10 +67,9 @@ function generateWorkout(previousWorkouts, day) {
   }
   const nextWorkoutDay = day || nextDay(previousWorkouts)
   const exercises = getExercisesForDay(nextWorkoutDay)
-  const exercisesWithWeights = addWeightsToExercises(
-    exercises,
-    previousWorkouts,
-    nextWorkoutDay,
+  console.log(exercises)
+  const exercisesWithWeights = exercises.map(exercise =>
+    addWeightsToExercise(exercise, previousWorkouts),
   )
 
   return {
