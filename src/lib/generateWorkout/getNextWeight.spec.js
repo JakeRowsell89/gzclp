@@ -30,14 +30,10 @@ describe('getNextWeight', () => {
       getNextWeight(
         [
           {
-            exercises: [
-              {
-                name: 'donkey',
-                completed: true,
-                stage: 1,
-                weight: previousAchievedWeight,
-              },
-            ],
+            name: 'donkey',
+            completed: true,
+            stage: 1,
+            weight: previousAchievedWeight,
           },
         ],
         previousWeight,
