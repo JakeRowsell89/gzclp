@@ -67,7 +67,6 @@ function generateWorkout(previousWorkouts, day) {
   }
   const nextWorkoutDay = day || nextDay(previousWorkouts)
   const exercises = getExercisesForDay(nextWorkoutDay)
-  console.log(exercises)
   const exercisesWithWeights = exercises.map(exercise =>
     addWeightsToExercise(exercise, previousWorkouts),
   )
