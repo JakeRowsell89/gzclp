@@ -99,7 +99,7 @@
       {
         "completed": true,
         "tier": 2,
-        "stage": 1,
+        "stage": 2,
         "name": "Squat",
         "format": "3x8",
         "weight": {
@@ -219,7 +219,7 @@
       {
         "completed": true,
         "tier": 2,
-        "stage": 1,
+        "stage": 2,
         "name": "Squat",
         "format": "3x8",
         "weight": {
