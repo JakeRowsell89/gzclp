@@ -3,6 +3,8 @@ import getFormat from './getFormat'
 import getNextStage from './getNextStage'
 import getNextWeight from './getNextWeight'
 
+import { ERRORS } from '../../constants'
+
 const routineDays = 4 // Magic number for days in routine, possibly changeable if other routines supported
 
 function unBasedExercise(exercise) {
@@ -21,7 +23,10 @@ function addWeightsToExercise(exercise, previousWorkouts) {
     .map(pw => pw.exercises)
     .reduce((p, c) => {
       const x = c.find(
-        e => e.name === exercise.name && e.tier === exercise.tier,
+        e =>
+          e.name === exercise.name &&
+          e.tier === exercise.tier &&
+          e.completed !== null, // possibly not needed
       )
       return x ? p.concat(x) : p
     }, [])
@@ -55,15 +60,18 @@ function addWeightsToExercise(exercise, previousWorkouts) {
   }
 }
 
-function nextDay(previousWorkouts) {
-  const nextDay = previousWorkouts[0].day + 1
+export function nextDay(previousWorkouts) {
+  if (!Array.isArray(previousWorkouts)) {
+    throw new Error(ERRORS.MISSING_PARAMS('previousWorkouts'))
+  }
+  const nextDay = (previousWorkouts[0] && previousWorkouts[0].day + 1) || 1
 
   return nextDay > routineDays ? 1 : nextDay
 }
 
-function generateWorkout(previousWorkouts, day) {
-  if (day !== undefined && typeof day !== 'number') {
-    throw new Error('Provided day was not a number')
+function generateWorkout(previousWorkouts = [], day) {
+  if (!day && typeof day !== 'number') {
+    throw new Error(ERRORS.INVALID_DAY)
   }
   const nextWorkoutDay = day || nextDay(previousWorkouts)
   const exercises = getExercisesForDay(nextWorkoutDay)
