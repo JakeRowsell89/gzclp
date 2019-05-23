@@ -38,6 +38,9 @@ class Exercise extends Component {
   startExercise() {
     this.setState(() => ({
       exerciseStatus: exerciseStatuses.slice(0, 1).pop(),
+      exercise: Object.assign({}, this.state.exercise, {
+        completed: this.state.exercise.completed || false,
+      }),
     }))
   }
 
@@ -91,7 +94,7 @@ class Exercise extends Component {
           <div>
             Reps{' '}
             {this.state.isAMRAP &&
-            this.state.passedSets + this.state.failedSets ===
+              this.state.passedSets + this.state.failedSets ===
               this.state.sets - 1
               ? 'AMRAP'
               : this.state.reps}

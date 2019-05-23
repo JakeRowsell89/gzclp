@@ -30,3 +30,8 @@ export const EXERCISES = {
 }
 
 export const T2_INCREMENT = 7.5
+
+export const ERRORS = {
+  INVALID_DAY: 'The provided day was invalid',
+  MISSING_PARAMS: (...params) => `Missing parameters: ${params.join(', ')}`,
+}

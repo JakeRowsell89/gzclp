@@ -1,78 +1,71 @@
-import { EXERCISES } from '../../constants'
+import { EXERCISES, ERRORS } from '../../constants'
 
 const exercisesForDay = {
   4: [
     {
-      "completed": false,
-      "tier": 1,
-      "name": EXERCISES.DEADLIFT,
+      tier: 1,
+      name: EXERCISES.DEADLIFT,
     },
     {
-      "completed": false,
-      "tier": 2,
-      "name": EXERCISES.OHP,
+      tier: 2,
+      name: EXERCISES.OHP,
     },
     {
-      "completed": false,
-      "tier": 3,
-      "name": EXERCISES.DUMBELL_ROW,
-    }
+      tier: 3,
+      name: EXERCISES.DUMBELL_ROW,
+    },
   ],
   3: [
     {
-      "completed": false,
-      "tier": 1,
-      "name": EXERCISES.BENCH,
+      tier: 1,
+      name: EXERCISES.BENCH,
     },
     {
-      "completed": false,
-      "tier": 2,
-      "name": EXERCISES.SQUAT
+      tier: 2,
+      name: EXERCISES.SQUAT,
     },
     {
-      "completed": false,
-      "tier": 3,
-      "name": EXERCISES.LAT_PULLDOWN
-    }
+      tier: 3,
+      name: EXERCISES.LAT_PULLDOWN,
+    },
   ],
   2: [
     {
-      "completed": false,
-      "tier": 1,
-      "name": EXERCISES.OHP,
+      tier: 1,
+      name: EXERCISES.OHP,
     },
     {
-      "completed": false,
-      "tier": 2,
-      "name": EXERCISES.DEADLIFT,
+      tier: 2,
+      name: EXERCISES.DEADLIFT,
     },
     {
-      "completed": false,
-      "tier": 3,
-      "name": EXERCISES.DUMBELL_ROW,
-    }
+      tier: 3,
+      name: EXERCISES.DUMBELL_ROW,
+    },
   ],
   1: [
     {
-      "completed": false,
-      "tier": 1,
-      "name": EXERCISES.SQUAT,
+      tier: 1,
+      name: EXERCISES.SQUAT,
     },
     {
-      "completed": false,
-      "tier": 2,
-      "name": EXERCISES.BENCH,
+      tier: 2,
+      name: EXERCISES.BENCH,
     },
     {
-      "completed": false,
-      "tier": 3,
-      "name": EXERCISES.LAT_PULLDOWN,
-    }
-  ]
+      tier: 3,
+      name: EXERCISES.LAT_PULLDOWN,
+    },
+  ],
 }
 
 function getExercisesForDay(day) {
-  return exercisesForDay[day]
+  if (!exercisesForDay[day]) {
+    throw new Error(ERRORS.INVALID_DAY)
+  }
+  return exercisesForDay[day].map(exercise =>
+    Object.assign({}, exercise, { completed: null }),
+  )
 }
 
 export default getExercisesForDay
