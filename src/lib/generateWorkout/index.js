@@ -70,9 +70,10 @@ export function nextDay(previousWorkouts) {
 }
 
 function generateWorkout(previousWorkouts = [], day) {
-  if (!day && typeof day !== 'number') {
+  if (day !== undefined && typeof day !== 'number') {
     throw new Error(ERRORS.INVALID_DAY)
   }
+
   const nextWorkoutDay = day || nextDay(previousWorkouts)
   const exercises = getExercisesForDay(nextWorkoutDay)
   const exercisesWithWeights = exercises.map(exercise =>

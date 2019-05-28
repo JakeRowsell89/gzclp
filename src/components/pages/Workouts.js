@@ -20,7 +20,7 @@ class Workouts extends Component {
 
   generateNewWorkout(event) {
     const nextWorkoutDay =
-      (event && event.target && event.target.value && Number(event.target.value)) || 1
+      event && event.target && event.target.value && Number(event.target.value)
     let activeWorkout = generateWorkout(this.props.workouts, nextWorkoutDay)
     store.dispatch(activateWorkout(activeWorkout))
   }

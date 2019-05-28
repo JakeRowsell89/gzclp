@@ -2,8 +2,8 @@ import { ERRORS } from '../../constants'
 import generateWorkout, { nextDay } from './index'
 
 describe('generateWorkout', () => {
-  it('throws an error when called without a valid day', () => {
-    expect(() => generateWorkout()).toThrowError(ERRORS.INVALID_DAY)
+  it('throws an error when called with an invalid day', () => {
+    expect(() => generateWorkout([], false)).toThrowError(ERRORS.INVALID_DAY)
   })
 })
 
