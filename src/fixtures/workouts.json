@@ -1,5 +1,45 @@
 [
   {
+    "day": 4,
+    "completed": true,
+    "date": "2019-05-30T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": false,
+        "tier": 1,
+        "stage": 1,
+        "name": "Deadlift",
+        "format": "5x3+",
+        "weight": {
+          "amount": 125,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": false,
+        "tier": 2,
+        "stage": 1,
+        "name": "Overhead Press",
+        "format": "3x10",
+        "weight": {
+          "amount": 45,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": false,
+        "tier": 3,
+        "stage": 1,
+        "name": "Dumbbell Row",
+        "format": "3x15+",
+        "weight": {
+          "amount": 16,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
     "day": 3,
     "completed": true,
     "date": "2019-05-21T13:35:56.660Z",
@@ -9,7 +49,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Bench Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 87.5,
           "unit": "kg"
@@ -49,7 +89,7 @@
         "tier": 1,
         "stage": 2,
         "name": "Overhead Press",
-        "format": "6x2",
+        "format": "6x2+",
         "weight": {
           "amount": 62.5,
           "unit": "kg"
@@ -89,7 +129,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Squat",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 105,
           "unit": "kg"
@@ -107,7 +147,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Deadlift",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 120,
           "unit": "kg"
@@ -147,7 +187,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Bench Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 85,
           "unit": "kg"
@@ -187,7 +227,7 @@
         "tier": 1,
         "stage": 2,
         "name": "Overhead Press",
-        "format": "6x2",
+        "format": "6x2+",
         "weight": {
           "amount": 60,
           "unit": "kg"
@@ -205,7 +245,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Squat",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 100,
           "unit": "kg"
@@ -245,7 +285,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Deadlift",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 115,
           "unit": "kg"
@@ -285,7 +325,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Bench Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 82.5,
           "unit": "kg"
@@ -325,7 +365,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Overhead Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 60,
           "unit": "kg"
@@ -365,7 +405,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Overhead Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 57.5,
           "unit": "kg"
@@ -406,7 +446,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Bench Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 80,
           "unit": "kg"
@@ -446,7 +486,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Squat",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 95,
           "unit": "kg"
@@ -486,7 +526,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Deadlift",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 110,
           "unit": "kg"
@@ -526,7 +566,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Bench Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 75,
           "unit": "kg"
@@ -566,7 +606,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Overhead Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 55,
           "unit": "kg"
@@ -606,7 +646,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Squat",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 90,
           "unit": "kg"
@@ -646,7 +686,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Deadlift",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 100,
           "unit": "kg"
@@ -686,7 +726,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Bench Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 70,
           "unit": "kg"
@@ -726,7 +766,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Overhead Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 52.5,
           "unit": "kg"
@@ -766,7 +806,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Squat",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 85,
           "unit": "kg"
@@ -806,7 +846,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Deadlift",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 90,
           "unit": "kg"
@@ -846,7 +886,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Bench Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 65,
           "unit": "kg"
@@ -887,7 +927,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Overhead Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 50,
           "unit": "kg"
@@ -927,7 +967,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Squat",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 80,
           "unit": "kg"
@@ -967,7 +1007,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Deadlift",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 90,
           "unit": "kg"
@@ -1007,7 +1047,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Bench Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 65,
           "unit": "kg"
@@ -1047,7 +1087,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Overhead Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 35,
           "unit": "kg"
@@ -1087,7 +1127,7 @@
         "tier": 1,
         "stage": 1,
         "name": "Squat",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 75,
           "unit": "kg"
@@ -1098,7 +1138,7 @@
         "tier": 2,
         "stage": 1,
         "name": "Bench Press",
-        "format": "5x3",
+        "format": "5x3+",
         "weight": {
           "amount": 47.5,
           "unit": "kg"
