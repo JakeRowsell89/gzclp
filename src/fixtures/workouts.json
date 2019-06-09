@@ -1,5 +1,23 @@
 [
   {
+    "day": 2,
+    "completed": true,
+    "date": "2019-05-26T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": false,
+        "tier": 1,
+        "stage": 2,
+        "name": "Overhead Press",
+        "format": "6x2+",
+        "weight": {
+          "amount": 65,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
     "day": 4,
     "completed": true,
     "date": "2019-06-06T13:35:56.660Z",
