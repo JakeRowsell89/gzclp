@@ -2,6 +2,24 @@
   {
     "day": 3,
     "completed": true,
+    "date": "2019-06-25T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": true,
+        "tier": 1,
+        "stage": 3,
+        "name": "Bench Press",
+        "format": "10x2+",
+        "weight": {
+          "amount": 90,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "completed": true,
     "date": "2019-06-13T13:35:56.660Z",
     "exercises": [
       {
