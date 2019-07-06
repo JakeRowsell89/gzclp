@@ -1,5 +1,45 @@
 [
   {
+    "day": 3,
+    "completed": true,
+    "date": "2019-06-25T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": false,
+        "tier": 1,
+        "stage": 3,
+        "name": "Bench Press",
+        "format": "10x1+",
+        "weight": {
+          "amount": 92.5,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": false,
+        "tier": 2,
+        "stage": 1,
+        "name": "Pendlay Row",
+        "format": "3x10",
+        "weight": {
+          "amount": 60,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": false,
+        "tier": 3,
+        "stage": 1,
+        "name": "Lat Pulldown",
+        "format": "3x15+",
+        "weight": {
+          "amount": 50,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
     "day": 2,
     "completed": true,
     "date": "2019-06-01T13:35:56.660Z",
@@ -38,7 +78,7 @@
         "tier": 1,
         "stage": 3,
         "name": "Bench Press",
-        "format": "10x2+",
+        "format": "10x1+",
         "weight": {
           "amount": 90,
           "unit": "kg"
@@ -56,7 +96,7 @@
         "tier": 1,
         "stage": 3,
         "name": "Bench Press",
-        "format": "10x2+",
+        "format": "10x1+",
         "weight": {
           "amount": 87.5,
           "unit": "kg"
