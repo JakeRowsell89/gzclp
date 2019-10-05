@@ -67,7 +67,7 @@ class Exercise extends Component {
 
   setNew5RepMax() {
     let n5rm = this.new5RepMax
-    console.log('new 5 rep max', this)
+    console.log('new 5 rep max', n5rm)
   }
 
   finishRest() {
