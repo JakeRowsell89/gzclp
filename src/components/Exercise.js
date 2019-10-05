@@ -33,6 +33,7 @@ class Exercise extends Component {
     this.passSet = this.passSet.bind(this)
     this.failSet = this.failSet.bind(this)
     this.finishRest = this.finishRest.bind(this)
+    // this.setNew5RepMax = this.setNew5RepMax.bind(this)
   }
 
   startExercise() {
@@ -64,6 +65,11 @@ class Exercise extends Component {
     }))
   }
 
+  setNew5RepMax() {
+    let n5rm = this.new5RepMax
+    console.log('new 5 rep max', this)
+  }
+
   finishRest() {
     this.setState(() => ({
       exerciseStatus: exerciseStatuses.slice(0, 1).pop(),
@@ -78,41 +84,56 @@ class Exercise extends Component {
           <div className="name">
             T{exercise.tier} {exercise.name}
           </div>
-          <div className="weight">
-            {exercise.weight.amount}
-            {exercise.weight.unit}
-          </div>
-        </div>
-        <div className="interactive">
-          <div>
-            Sets <span className="passedSets">{this.state.passedSets}</span>
-            {this.state.failedSets > 0 && (
-              <span className="failedSets"> + {this.state.failedSets}</span>
-            )}{' '}
-            / {this.state.sets}
-          </div>
-          <div>
-            Reps{' '}
-            {this.state.isAMRAP &&
-              this.state.passedSets + this.state.failedSets ===
-              this.state.sets - 1
-              ? 'AMRAP'
-              : this.state.reps}
-          </div>
-          {!this.state.exerciseStatus && (
-            <EmojiButton emoji="▶️" clickHandler={this.startExercise} />
-          )}
-          {this.state.exerciseStatus === 'STARTED' && (
-            <div>
-              <EmojiButton emoji="✅" clickHandler={this.passSet} />{' '}
-              <EmojiButton emoji="❌" clickHandler={this.failSet} />
+          {(exercise.weight.amount && (
+            <div className="weight">
+              {exercise.weight.amount}
+              {exercise.weight.unit}
             </div>
-          )}
-          {this.state.exerciseStatus === 'REST' && (
-            <Countdown duration={90} finishRest={this.finishRest} />
-          )}
-          {this.state.exerciseStatus === 'COMPLETE' && <div>Completed!</div>}
+          )) || <div className="test-5rm">Test new 5rm!</div>}
         </div>
+        {(exercise.weight.amount && (
+          <div className="interactive">
+            <div>
+              Sets <span className="passedSets">{this.state.passedSets}</span>
+              {this.state.failedSets > 0 && (
+                <span className="failedSets"> + {this.state.failedSets}</span>
+              )}{' '}
+              / {this.state.sets}
+            </div>
+            <div>
+              Reps{' '}
+              {this.state.isAMRAP &&
+              this.state.passedSets + this.state.failedSets ===
+                this.state.sets - 1
+                ? 'AMRAP'
+                : this.state.reps}
+            </div>
+            {!this.state.exerciseStatus && (
+              <EmojiButton emoji="▶️" clickHandler={this.startExercise} />
+            )}
+            {this.state.exerciseStatus === 'STARTED' && (
+              <div>
+                <EmojiButton emoji="✅" clickHandler={this.passSet} />{' '}
+                <EmojiButton emoji="❌" clickHandler={this.failSet} />
+              </div>
+            )}
+            {this.state.exerciseStatus === 'REST' && (
+              <Countdown duration={90} finishRest={this.finishRest} />
+            )}
+            {this.state.exerciseStatus === 'COMPLETE' && <div>Completed!</div>}
+          </div>
+        )) || (
+          <div className="interactive">
+            <div className="5rm-input">
+              <input
+                type="text"
+                value={this.new5RepMax}
+                onChange={this.setNew5RepMax}
+              />
+            </div>
+            <EmojiButton emoji="🎖" clickHandler={this.setNew5RepMax} />
+          </div>
+        )}
       </div>
     )
   }
