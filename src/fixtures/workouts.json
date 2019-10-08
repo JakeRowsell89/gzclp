@@ -1,5 +1,45 @@
 [
   {
+    "day": 4,
+    "completed": true,
+    "date": "2019-10-08T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": true,
+        "tier": 1,
+        "stage": 1,
+        "name": "Deadlift",
+        "format": "5x3+",
+        "weight": {
+          "amount": 100,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": true,
+        "tier": 2,
+        "stage": 1,
+        "name": "Overhead Press",
+        "format": "10x3+",
+        "weight": {
+          "amount": 40,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": true,
+        "tier": 3,
+        "stage": 1,
+        "name": "Dumbell Curl",
+        "format": "10x3+",
+        "weight": {
+          "amount": 8,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
     "day": 3,
     "completed": true,
     "date": "2019-10-05T13:35:56.660Z",
