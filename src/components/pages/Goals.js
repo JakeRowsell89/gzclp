@@ -4,10 +4,16 @@ import PropTypes from 'prop-types'
 
 import goalAchievement from '../../lib/goalAchievement'
 import './Goals.css'
+// import workoutReducer from '../../lib/reducers/workoutReducer'
+// import Workout from './Workout'
 
 class Goals extends Component {
   render() {
-    const workouts = this.props.workouts
+    const days = 90
+    const workouts = this.props.workouts.filter(
+      workout =>
+        Math.floor((new Date() - new Date(workout.date)) / 86400000) <= days,
+    )
     return (
       <div className="Goals-page">
         {this.props.goals
