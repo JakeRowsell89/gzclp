@@ -1,5 +1,63 @@
 [
   {
+    "day": 1,
+    "completed": true,
+    "date": "2020-01-06T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": true,
+        "tier": 1,
+        "stage": 1,
+        "name": "Squat",
+        "format": "5x3+",
+        "weight": {
+          "amount": 65,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": true,
+        "tier": 2,
+        "stage": 1,
+        "name": "Bench Press",
+        "format": "3x10",
+        "weight": {
+          "amount": 62.5,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
+    "day": 4,
+    "completed": true,
+    "date": "2020-01-12T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": true,
+        "tier": 1,
+        "stage": 1,
+        "name": "Deadlift",
+        "format": "5x3+",
+        "weight": {
+          "amount": 115,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": true,
+        "tier": 2,
+        "stage": 2,
+        "name": "Overhead Press",
+        "format": "3x8",
+        "weight": {
+          "amount": 42.5,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
     "day": 3,
     "completed": true,
     "date": "2020-01-10T13:35:56.660Z",
