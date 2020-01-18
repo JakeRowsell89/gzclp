@@ -1,8 +1,37 @@
 [
   {
+    "day": 2,
+    "completed": true,
+    "date": "2019-12-18T13:35:56.660Z",
+    "exercises": [
+      {
+        "completed": true,
+        "tier": 1,
+        "stage": 1,
+        "name": "Overhead Press",
+        "format": "5x3+",
+        "weight": {
+          "amount": 60,
+          "unit": "kg"
+        }
+      },
+      {
+        "completed": true,
+        "tier": 2,
+        "stage": 2,
+        "name": "Deadlift",
+        "format": "3x8",
+        "weight": {
+          "amount": 95,
+          "unit": "kg"
+        }
+      }
+    ]
+  },
+  {
     "day": 1,
     "completed": true,
-    "date": "2020-01-06T13:35:56.660Z",
+    "date": "2020-01-15T13:35:56.660Z",
     "exercises": [
       {
         "completed": true,
